@@ -7,3 +7,13 @@
   <strong>Address:</strong>
   <%= @restaurant.address %>
 </p>
+<p>
+
+  <strong>Menu:</strong>
+ 
+  <% @restaurant.menus.each do |menu| %>
+  <%= menu.item_desc %>
+  <%= menu.item_name %>
+  <%= menu.item_price %>
+  <% end %>
+</p>

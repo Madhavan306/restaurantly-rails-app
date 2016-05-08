@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505101836) do
+ActiveRecord::Schema.define(version: 20160508055440) do
+
+  create_table "menus", force: true do |t|
+    t.string  "item_desc"
+    t.string  "item_name"
+    t.float   "item_price"
+    t.integer "restaurant_id"
+  end
 
   create_table "restaurants", force: true do |t|
     t.string   "name"

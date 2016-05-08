@@ -1,0 +1,19 @@
+<%= form_for :menu,url:menus_path do |f| %>
+<p> 
+<%= f.label :item_description %> <br>
+<%= f.text_field :item_desc %>
+</p>
+<p> 
+<%= f.label :item_name , "Item name"%> <br>
+<%= f.text_field :item_name %>
+</p>
+<p> 
+<%= f.label :item_price %> <br>
+<%= f.text_field :item_price %>
+</p>
+<%= f.label :choose_Restaurants %><br>
+<%= collection_select(:menu, :restaurant_id, Restaurant.all, :id, :name) %>
+<p>
+<%= f.submit %>
+</p>
+<% end %>
